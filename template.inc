@@ -109,6 +109,11 @@ public static function printFooter(){ ?>
      </div>
 	
 </div>
+<div class="row">
+	<div class="column grid_12">
+            &nbsp;
+        </div>
+</div>
 
 
     </div>
