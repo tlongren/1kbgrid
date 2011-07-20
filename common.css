@@ -46,7 +46,7 @@ code {
 #main_menu {
 
 
-    background: #000;
+    background: #fff;
 
 
 }
@@ -246,15 +246,16 @@ body {
     border: 1px solid gray;
 }
 
-#form_error {
+.form_error {
    color: #F58;
 }
 
-#form_confirm {
-    color: #F2583E;
+.form_confirm {
+    color: #007;
 }
 
-#system_message {
+.system_message {
+    color: #070;
 }
 
 fieldset {

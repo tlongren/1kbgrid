@@ -81,10 +81,17 @@ echo template::getInlineJs();
      </div>
 
      <div class="column grid_9">
-
          <div id="module_menu"><?php
            echo layout::getModuleMenu(); ?>
          </div>
+
+         <div class="system_message">
+        <?php
+
+        echo session::getActionMessage();
+
+        ?>
+        </div>
          <div id="content">
 
 
