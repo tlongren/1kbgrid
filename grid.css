@@ -25,6 +25,7 @@
 	width: 960px;
 	margin: 0 auto;
 	overflow: hidden;
+        float: left;
 }
 .row .row {
 	margin: 0 -10px;

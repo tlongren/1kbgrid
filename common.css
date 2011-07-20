@@ -106,7 +106,6 @@ display: inline;
 
 
 #sidebar_left ul  {
-    list-style:none;
     color: #000;
     text-align: left;
     padding: 0px 6px 0px;
@@ -187,9 +186,9 @@ body {
 #page {
     background: #fff;
     padding: 20px 20px 20px 20px;
-
+    height: 100%;
     position:absolute;
-    width:90%;
+    width: 90%;
     text-align:left;
     margin: 0 auto;
 }
