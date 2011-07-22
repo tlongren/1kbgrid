@@ -186,7 +186,6 @@ body {
 #page {
     background: #fff;
     padding: 20px 20px 20px 20px;
-    height: 100%;
     position:absolute;
     width: 90%;
     text-align:left;

@@ -23,10 +23,11 @@ public static function printHeader(){ ?>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
     <link href="/templates/1kbgrid/grid.css" type="text/css" rel="stylesheet" media="screen"/>
-    <link href="/templates/1kbgrid/common.css" type="text/css" rel="stylesheet" media="screen"/>
+   <!-- <link href="/templates/1kbgrid/common.css" type="text/css" rel="stylesheet" media="screen"/>-->
 
 <?php
 
+template::setTemplateCss('1kbgrid');
 echo template::getCss();
 echo template::getInlineCss();
 
@@ -39,7 +40,7 @@ echo template::getInlineJs();
 </head>
 <body>
 
-    <div id ="page">
+<div id ="page">
 <div class="row">
 	<div class="column grid_12">
 
@@ -105,18 +106,21 @@ echo template::getInlineJs();
  * method for print footer of page
  */
 public static function printFooter(){ ?>
+
+
          </div>
      </div>
 	
 </div>
+
+
 <div class="row">
 	<div class="column grid_12">
-            &nbsp;
+        &nbsp;
         </div>
 </div>
-
-
-    </div>
+    
+</div>
 </body>
 </html>
 
