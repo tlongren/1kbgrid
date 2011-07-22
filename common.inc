@@ -21,6 +21,48 @@ define('MENU_SUB_SEPARATOR', ' | ');
 define('MENU_SUB_SEPARATOR_SEC', ' :: ');
 
 /**
+ *
+ * @param string $name      the string used in the 'name' attribute
+ * @param string $title     the string used as the label
+ *
+ * @return string   the form elements start'
+ */
+function get_form_element_start($name, $title = '&nbsp;'){
+    $str = "<label for=\"$name\">$title</label><br />\n";
+    return $str;
+}
+
+/**
+ * function getting a form elements end
+ *
+ * @return string   the form elements start'
+ */
+function get_form_element_end(){
+    $str = "<br />\n";
+    return $str;
+}
+
+/**
+ * function for printing the forms start
+ * @param   string   the caption of the form
+ */
+function view_form_start($caption){
+    $str = "<fieldset>";
+    if ($caption) {
+        $str.= "<legend>" . $caption . "</legend>";
+    }
+    print $str;
+
+}
+
+/**
+ * function for printing the forms fieldset end.
+ */
+function view_form_end(){
+    print "</fieldset>\n";
+}
+
+/**
  * function for printing form errors
  *
  * @param  array    errors to display on wrong form submit
