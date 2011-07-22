@@ -39,6 +39,20 @@ function view_form_errors($errors){
     echo "<!-- / end form_error -->\n";
 }
 
+function template_view_errors($errors){
+    if (is_string($errors)){
+        view_error($errors);
+        return;
+    }
+    echo "<!-- view_form_errors -->\n";
+    echo "<div class=\"form_error\"><ul>\n";
+    foreach($errors as $error){
+        echo "<li>DADA$error</li>\n";
+    }
+    echo "</ul></div>\n";
+    echo "<!-- / end form_error -->\n";
+}
+
 /**
  * function for displaying an confirm message
  * @param   string   message positive confirmation on correct filled form
