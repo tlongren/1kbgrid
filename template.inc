@@ -116,7 +116,7 @@ public static function printFooter(){ ?>
 
 <div class="row">
 	<div class="column grid_12">
-        &nbsp;
+        <?=template::getEndContent()?>
         </div>
 </div>
     
