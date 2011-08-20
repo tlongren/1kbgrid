@@ -1,5 +1,7 @@
 <?php
 
+include "layout2.php";
+
 class mainTemplate extends template {
 
 /**
@@ -40,60 +42,69 @@ echo template::getInlineJs();
 </head>
 <body>
 
+    <div id ="hidden">
+<a href="/account/login/index">logon</a>
+</div>
+
 <div id ="page">
-<div class="row">
-	<div class="column grid_12">
 
-            <?php if (empty(register::$vars['coscms_main']['logo'])) { ?>
-            <a href="/"><?php echo $_SERVER['HTTP_HOST']?></a><?php
-        } else { ?>
-            <div id = "logo_img"><a href="/"><img alt="<?php echo $_SERVER['HTTP_HOST']?>" src="/logo/<?=register::$vars['coscms_main']['logo']?>" /></a></div><?php
-        } ?>
-
-
-
-        </div>
-</div>
-
-<div class="row">
-	<div class="column grid_12">
-            <div id="main_menu">
-            <?php
-                echo layout::getMainMenu(); ?>
+    <div class="row">
+            <div class="column grid_3">
+            &nbsp;
             </div>
-        </div>
-</div>
+            <div class="column grid_9">
+
+                <?php if (empty(register::$vars['coscms_main']['logo'])) { ?>
+                <a href="/"><?php echo $_SERVER['HTTP_HOST']?></a><?php
+            } else { ?>
+                <div id = "logo_img"><a href="/"><img alt="<?php echo $_SERVER['HTTP_HOST']?>" src="/logo/<?=register::$vars['coscms_main']['logo']?>" /></a></div><?php
+            } ?>
 
 
 
+            </div>
 
-<div class="row">
-    <div class="column grid_3">
-            <div id="sidebar_left">
+    </div>
+
+    <div class="row">
+            <div class="column grid_3">
+            &nbsp;
+            </div>
+            <div class="column grid_9">
+                <div id="main_menu">
+                <?php
+                    echo layout2::getMainMenu(); ?>
+                </div>
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="column grid_3">
+                <div id="sidebar_left">
+                <?php
+
+                $blocks = layout::getBlocks();
+                foreach ($blocks as $key => $val){
+                    print $val;
+                }
+
+                ?>
+                </div>
+         </div>
+
+         <div class="column grid_6">
+             <div id="module_menu"><?php
+               echo layout::getModuleMenu(); ?>
+             </div>
+
+             <div class="system_message">
             <?php
 
-            $blocks = layout::getBlocks();
-            foreach ($blocks as $key => $val){
-                print $val;
-            }
+            echo session::getActionMessage();
 
             ?>
             </div>
-     </div>
-
-     <div class="column grid_9">
-         <div id="module_menu"><?php
-           echo layout::getModuleMenu(); ?>
-         </div>
-
-         <div class="system_message">
-        <?php
-
-        echo session::getActionMessage();
-
-        ?>
-        </div>
-         <div id="content">
+             <div id="content">
 
 
 <?php
@@ -108,17 +119,28 @@ echo template::getInlineJs();
 public static function printFooter(){ ?>
 
 
-         </div>
-     </div>
-	
-</div>
-
-
-<div class="row">
-	<div class="column grid_12">
-        <?=template::getEndContent()?>
+             </div>
         </div>
-</div>
+        <div class="column grid_3">
+            <div id="sidebar_right">
+                <?php
+
+                $blocks = layout::getBlocksSec();
+                foreach ($blocks as $key => $val){
+                    print $val;
+                }
+
+                ?>
+            </div>
+         </div>
+    </div>
+
+
+    <div class="row">
+            <div class="column grid_12">
+            <?=template::getEndContent()?>
+            </div>
+    </div>
     
 </div>
 </body>
