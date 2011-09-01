@@ -6,7 +6,7 @@
  * @package    coslib
  */
 
-define('HTML_FORM_TEXT_SIZE', 60);
+define('HTML_FORM_TEXT_SIZE', 40);
 define('HTML_FORM_MAX_FILE_SIZE', 1048576); // 1 MB
 define('HTML_FORM_PASSWD_SIZE', 8);
 define('HTML_FORM_TEXTAREA_WT', 70);
