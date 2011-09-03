@@ -1,7 +1,11 @@
 <?php
+
+/**
+ * layout extension for parsing module menu slightly different
+ */
 class layout2 extends layout {
 
-        /**
+    /**
      * method for parsing a module menu.
      * A module menu is a menu connected to a main menu item.
      *
