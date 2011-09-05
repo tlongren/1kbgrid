@@ -1,5 +1,7 @@
 <?php
 
+template::init('1kbgrid');
+
 class mainTemplate extends template {
 
 
@@ -8,13 +10,7 @@ class mainTemplate extends template {
  *
  * @param  array    assoc array containing current page info
  */
-public static function printHeader(){ 
-    template::init('1kbgrid');
-    //echo template::getIniSetting('background');
-    
-    ?>
-
-
+public static function printHeader(){ ?>
 <!doctype html>
 <html lang="<?=register::$vars['coscms_main']['lang']?>">
 <head>
@@ -34,7 +30,7 @@ public static function printHeader(){
 
 
 
-template::setTemplateCss();
+template::setTemplateCss('1kbgrid');
 echo template::getCss();
 echo template::getInlineCss();
 
