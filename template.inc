@@ -2,12 +2,17 @@
 
 class mainTemplate extends template {
 
+
 /**
  * method for printing out template header
  *
  * @param  array    assoc array containing current page info
  */
-public static function printHeader(){ ?>
+public static function printHeader(){ 
+    template::init('1kbgrid');
+    //echo template::getIniSetting('background');
+    
+    ?>
 
 
 <!doctype html>
@@ -27,7 +32,9 @@ public static function printHeader(){ ?>
 
 <?php
 
-template::setTemplateCss('1kbgrid');
+
+
+template::setTemplateCss();
 echo template::getCss();
 echo template::getInlineCss();
 
