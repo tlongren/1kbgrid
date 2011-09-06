@@ -52,9 +52,6 @@ echo template::getInlineJs();
         } else { ?>
             <div id = "logo_img"><a href="/"><img alt="<?php echo $_SERVER['HTTP_HOST']?>" src="/logo/<?=register::$vars['coscms_main']['logo']?>" /></a></div><?php
         } ?>
-
-
-
         </div>
 </div>
 
@@ -66,9 +63,6 @@ echo template::getInlineJs();
             </div>
         </div>
 </div>
-
-
-
 
 <div class="row">
     <div class="column grid_3">
@@ -109,13 +103,9 @@ echo template::getInlineJs();
  * method for print footer of page
  */
 public static function printFooter(){ ?>
-
-
          </div>
-     </div>
-	
+     </div>	
 </div>
-
 
 <div class="row">
 	<div class="column grid_12">
