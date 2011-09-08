@@ -69,7 +69,7 @@ echo template::getInlineJs();
             <div id="sidebar_left">
             <?php
 
-            $blocks = layout::getBlocks();
+            $blocks = layout::getBlock('blocks');
             foreach ($blocks as $key => $val){
                 print $val;
             }
