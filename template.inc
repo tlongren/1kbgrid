@@ -1,5 +1,7 @@
 <?php
 
+include_once "layout2.php";
+
 template::init('1kbgrid');
 
 class mainTemplate extends template {
@@ -34,8 +36,7 @@ template::setTemplateCss('1kbgrid');
 echo template::getCss();
 echo template::getInlineCss();
 
-echo template::getJs();
-echo template::getInlineJs();
+
 
 ?>
 
@@ -44,6 +45,26 @@ echo template::getInlineJs();
 <body>
 
 <div id ="page">
+<?php
+
+if (session::isAdmin()) { ?>
+    <div class="row">
+            <div class="column grid_12">
+                <div id="system_admin_menu">
+            <?php
+$blocks = layout2::getBlock('blocks_top');
+                foreach ($blocks as $key => $val){
+                    echo $val;
+                }
+
+?>
+
+                 </div>
+                        
+           </div>
+
+    </div>
+<?php } ?>
 <div class="row">
 	<div class="column grid_12">
 <?=template::getLogoHTML(); ?>
@@ -109,6 +130,14 @@ public static function printFooter(){ ?>
 </div>
     
 </div>
+    
+        <?php
+
+
+
+    echo template::getInlineJs();
+echo template::getJs();
+?>
 </body>
 </html>
 

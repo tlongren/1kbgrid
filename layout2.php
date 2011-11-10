@@ -1,11 +1,8 @@
 <?php
 
-/**
- * layout extension for parsing module menu slightly different
- */
 class layout2 extends layout {
 
-    /**
+        /**
      * method for parsing a module menu.
      * A module menu is a menu connected to a main menu item.
      *
@@ -57,9 +54,17 @@ class layout2 extends layout {
                 if (!session::isSuper()  && $v['auth'] == 'super') continue;
             }
 
-
+            //echo $_SERVER['REQUEST_URI'];
+            $options = array ();
+           
+            if ($module_base) {
+                if (strstr($v['url'] , $module_base))  {
+                    $options['class'] = 'current';
+                }
+            }
+            
             $str.="<li>";
-            $link = create_link( $v['url'], $v['title']);
+            $link = html::createLink( $v['url'], lang::translate($v['title']), $options);
             $str.=  $link;
             if (isset($v['sub'])){
                 $str .= self::parseMainMenuList($v['sub']);
