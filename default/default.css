@@ -42,6 +42,14 @@ code {
     width: 100%;
 }
 
+#logo_title a {
+    font-size: 400%;
+    color:#a00;
+    line-height: 100%;
+    
+
+}
+
 #main_menu {
     background: #fff;
     font-family: Georgia,'Times New Roman',times,serif;
