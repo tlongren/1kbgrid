@@ -75,7 +75,7 @@ $blocks = layout2::getBlock('blocks_top');
 	<div class="column grid_12">
             <div id="main_menu">
             <?php
-                echo layout::getMainMenu(); ?>
+                echo layout2::getMainMenu(); ?>
             </div>
         </div>
 </div>
@@ -85,7 +85,7 @@ $blocks = layout2::getBlock('blocks_top');
             <div id="sidebar_left">
             <?php
 
-            $blocks = layout::getBlock('blocks');
+            $blocks = layout2::getBlock('blocks');
             foreach ($blocks as $key => $val){
                 print $val;
             }
@@ -96,7 +96,7 @@ $blocks = layout2::getBlock('blocks_top');
 
      <div class="column grid_9">
          <div id="module_menu"><?php
-           echo layout::getModuleMenu(); ?>
+           echo layout2::getModuleMenu(); ?>
          </div>
 
          <div class="system_message">

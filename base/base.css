@@ -310,8 +310,11 @@ label {
 }
 
 
-#logo_title {
-    margin-left: 185px;
-    font-size: 300%;
+#logo_title  {
+    font-size: 400%;
+    color:#a00;
+    line-height: 100%;
+    
+
 }
 

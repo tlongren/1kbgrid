@@ -44,7 +44,7 @@ code {
     width: 100%;
 }
 
-#logo_title a {
+#logo_title  {
     font-size: 400%;
     color:#a00;
     line-height: 100%;
@@ -114,7 +114,9 @@ code {
     float: left;
     width: 180px;
     font-family: Arial,Helvetica,sans-serif;
-    font-size: 110%;
+    font-size: 220%;
+    line-height: 100%;
+
     padding: 0px 0px 0px 20px;
     border: 1px #999999 solid;
 }
@@ -124,6 +126,7 @@ code {
     text-align: left;
     padding: 0px 6px 0px;
     vertical-align:top;
+        list-style: none;
 
 }
 #sidebar_left li a.current {
