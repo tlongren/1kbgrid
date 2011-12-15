@@ -42,8 +42,8 @@ class layout2 extends layout {
      */
     public static function parseMainMenuList (){
 
-        $module_base = uri::$info['module_base'];
-
+        $module_frag = uri::$info['module_frag'];
+        //print_r(uri::$info);
         $menu = array();
         $menu = self::$menu['main'];
         $str = $css = '';
@@ -56,12 +56,18 @@ class layout2 extends layout {
 
             //echo $_SERVER['REQUEST_URI'];
             $options = array ();
-           
-            if ($module_base) {
-                if (strstr($v['url'] , $module_base))  {
-                    $options['class'] = 'current';
-                }
+            //echo $v['url']; die;
+            
+            // find first part of url
+            $url = explode('/', $v['url']);
+            if (isset($url[0]) && isset($module_frag)) {
+               if ($url[0] == $module_frag) {
+                   $options['class'] = 'current';
+               } else {
+                   //$current = false;
+               }
             }
+
             
             $str.="<li>";
             $link = html::createLink( $v['url'], lang::translate($v['title']), $options);
