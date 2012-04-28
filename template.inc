@@ -123,7 +123,7 @@ public static function printFooter(){ ?>
 </div>
 
 <div class="row">
-	<div class="column grid_12">
+	<div class="column grid_12">&nbsp;
         <?=template::getEndContent()?>
         </div>
 </div>
