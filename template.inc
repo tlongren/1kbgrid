@@ -42,6 +42,7 @@ echo template::getInlineCss();
 
 </head>
 <body>
+<?=template::geStartHTML()?> 
 
 <div id ="page">
 <?php
