@@ -147,17 +147,17 @@ code {
 }
 
 a:link {
-  color: #111;
-  text-decoration: none;
+  color: #a00;
+
 }
 
 a:visited {
-  color: #333;
+  color: #a00;
   text-decoration: none;
 }
 
 a:hover {
-  color: #333;
+  color: #666;
   text-decoration: underline;
 }
 
