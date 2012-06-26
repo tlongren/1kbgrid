@@ -4,6 +4,8 @@ include_once "layout2.php";
 
 template::init('1kbgrid');
 
+
+
 class mainTemplate extends template {
 
 
