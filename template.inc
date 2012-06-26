@@ -4,6 +4,28 @@ include_once "layout2.php";
 
 template::init('1kbgrid');
 
+
+require_once 'lessphp/lessc.inc.php';
+
+
+try {
+    
+    $domain = config::getDomain();
+    $path = _COS_PATH . "/htdocs/files/$domain/lesscss";
+    //echo $realpath = realpath(/lesscss");
+    //die;
+    if (!file_exists($path)) {
+        mkdir($path);
+    }
+    
+    $input = _COS_PATH . "/htdocs/templates/lesscss/input.less";
+    $output = $path . "/parsed.css";
+    lessc::ccompile($input, $output);
+} catch (exception $ex) {
+    exit('lessc fatal error:<br />'.$ex->getMessage());
+}
+
+
 class mainTemplate extends template {
 
 
@@ -12,7 +34,9 @@ class mainTemplate extends template {
  *
  * @param  array    assoc array containing current page info
  */
-public static function printHeader(){ ?>
+public static function printHeader(){ 
+    $domain = config::getDomain();
+    ?>
 <!doctype html>
 <html lang="<?=config::$vars['coscms_main']['lang']?>">
 <head>
@@ -25,13 +49,13 @@ public static function printHeader(){ ?>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
-    <link href="/templates/1kbgrid/grid.css" type="text/css" rel="stylesheet" media="screen"/>
+    <link href="/files/<?=$domain?>/lesscss/parsed.css" type="text/css" rel="stylesheet" media="screen"/>
   
 <?php
 
 echo template::getJsHead();
 
-template::setTemplateCss('1kbgrid');
+//template::setTemplateCss('1kbgrid');
 echo template::getCss();
 echo template::getInlineCss();
 
