@@ -1,0 +1,25 @@
+// this is a comment
+body {
+  color: black; // as is this
+  /* block comments still work also */
+}
+
+@fontsize: 200%;
+.headline {
+    color: @color_main;
+    font-size: @fontsize;
+    .Round;
+}
+
+.headline a {
+    color: @color_main;
+
+}
+
+@color_main: #070;
+
+.Round{
+    -webkit-border-radius:9999px;
+       -moz-border-radius:9999px;
+            border-radius:9999px;  
+}
