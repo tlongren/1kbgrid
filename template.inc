@@ -28,7 +28,7 @@ public static function printHeader(){ ?>
     <link href="/templates/1kbgrid/grid.css" type="text/css" rel="stylesheet" media="screen"/>
   
 <?php
-
+echo template::getMeta();
 echo template::getJsHead();
 
 template::setTemplateCss('1kbgrid');
