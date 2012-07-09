@@ -38,6 +38,8 @@ echo template::setTemplateCss('1kbgrid');
 echo template::getCss();
 echo template::getInlineCss();
 
+echo template::getFaviconHTML();
+
 
 
 ?>
