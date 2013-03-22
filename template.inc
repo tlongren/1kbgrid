@@ -55,7 +55,7 @@ echo template::getFaviconHTML();
 if (session::isAdmin()) { ?>
     <div class="row">
             <div class="column grid_12">
-                <div id="system_admin_menu">
+
             <?php
 $blocks = layout2::getBlock('blocks_top');
                 foreach ($blocks as $key => $val){
@@ -64,7 +64,6 @@ $blocks = layout2::getBlock('blocks_top');
 
 ?>
 
-                 </div>
                         
            </div>
 
