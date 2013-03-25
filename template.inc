@@ -24,21 +24,25 @@ public static function printHeader(){
 <title><?php echo template::getTitle(); ?></title>
 
 
-   <!-- <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/ui-lightness/jquery-ui.css" />-->
-<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/hot-sneaks/jquery-ui.css" />
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.js"></script>
-    <link href="/templates/1kbgrid/grid.css" type="text/css" rel="stylesheet" media="screen"/>
+    
 <?php
-echo template::getMeta();
-echo template::getJsHead();
 
-echo template::setTemplateCss('1kbgrid');
-echo template::getCss();
+template::setRelAsset('css', 'http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css');  
+template::setRelAsset('js', 'http://code.jquery.com/jquery-1.9.1.min.js');  
+template::setRelAsset('js', 'http://code.jquery.com/ui/1.10.2/jquery-ui.min.js');
+
+echo template::getRelAssets();
+echo template::getJsHead();
+echo template::getMeta();
+
+template::setTemplateCss('1kbgrid', null, 10);
+template::setCss('/templates/1kbgrid/grid.css');
+echo template::getFaviconHTML();
+
+
+echo template::getCompressedCss();
 echo template::getInlineCss();
 
-echo template::getFaviconHTML();
 
 
 
