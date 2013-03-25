@@ -36,6 +36,7 @@ echo template::getJsHead();
 echo template::getMeta();
 
 template::setTemplateCss('1kbgrid', null, 10);
+
 template::setCss('/templates/1kbgrid/grid.css');
 echo template::getFaviconHTML();
 
